@@ -2,7 +2,7 @@
     --title_div_height: 20%;
     --title_div_background_color: #333;
     --background_color: #f4f4f4;
-    --marin_between_elements: 40px;
+    --marin_between_elements: 50px;
     --button_color: rgb(0, 84, 219);
 }
 
@@ -65,11 +65,16 @@ input[type="text"] {
     text-align: center;
 }
 
+@keyframes spin {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
+.spin-animation {
+    animation: spin 0.5s linear;
+}
 
 #myCanvas {
     border: 1px solid black;
     border-radius: 20px;
-    /*background-color: black;
-    /*margin: var(--marin_between_elements);
-    background-color: white;*/
 }

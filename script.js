@@ -21,16 +21,30 @@ const dotsPositions = [
 ];
 
 function displayResult() {
+    spinDice();
     result = getRandomNumber();
     drawDots();
     document.getElementById("resultInput").value = result;
 }
+
+function spinDice() {
+    const canvasElement = document.getElementById("myCanvas");
+
+    // Add the spin-animation class
+    canvasElement.classList.add("spin-animation");
+
+    // Remove the class after the animation ends
+    setTimeout(() => {
+        canvasElement.classList.remove("spin-animation");
+    }, 1000); // Match the duration of the animation (1s)
+};
 
 function getRandomNumber() {
     return Math.floor(Math.random() * 6) + 1;
 }
 
 function drawDots() {
+    
     canvasFillBackground();
     let pos = dotsPositions.at(0).at(0);
     if (result == 1 || result == 3 || result == 5) {
