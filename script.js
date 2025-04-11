@@ -2,12 +2,11 @@
 let result = 0;
 
 function displayResult() {
-    // TODO: implement
-    //document.getElementById("resultInput").value = "1";
+    result = getRandomNumber();
+    document.getElementById("resultInput").value = result;
 }
 
 function getRandomNumber() {
-    // TODO: implement
-    
+    return Math.floor(Math.random() * 6) + 1;
 }
 
