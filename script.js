@@ -8,9 +8,9 @@ const dotRadius = 20;
 
 /*
     0    1    2
-    *         * 2
-    *    *    * 1
     *         * 0
+    *    *    * 1
+    *         * 2
 
  */
 const side=c.height;
