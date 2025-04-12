@@ -22,9 +22,13 @@ const dotsPositions = [
 
 function displayResult() {
     spinDice();
-    result = getRandomNumber();
-    drawDots();
-    document.getElementById("resultInput").value = result;
+    
+    // Delay the result generation and dot drawing until the spin animation ends
+    setTimeout(() => {
+        result = getRandomNumber();
+        drawDots();
+        document.getElementById("resultInput").value = result;
+    }, 500); // Match the duration of the spin animation (1s)
 }
 
 function spinDice() {
